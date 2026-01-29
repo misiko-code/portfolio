@@ -12,6 +12,51 @@ img {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card,
+  .fun-fact-tab,
+  .fun-tab-card,
+  .profile-content,
+  section {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .profile-content,
+  .fun-fact-tab-content {
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project-collage {
+    width: 100%;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .lang-toggle-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* Center content and limit max width */
 .container {
   max-width: 1200px;   /* prevents content from stretching too wide */
