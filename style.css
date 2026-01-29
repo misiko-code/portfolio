@@ -292,18 +292,7 @@ body::after {
   transform: scale(1.05);
   box-shadow: 0 0 40px rgba(20,242,215,.35);
 }
-/* ---------- MOBILE IMAGE SAFETY ---------- */
-@media (max-width: 640px) {
-  .project-image {
-    height: auto;
-    aspect-ratio: auto;
-  }
 
-  .project-image img {
-    object-fit: contain;
-    background-color: #0f0f0f;
-  }
-}
 /* ---------------- PROJECT CARD LIFT ---------------- */
 
 .project .card {
