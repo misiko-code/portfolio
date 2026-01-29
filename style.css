@@ -225,6 +225,19 @@ body::after {
   line-height: 1.5;
 }
 
+/* ---------------- STAT CARD HOVER EFFECT ---------------- */
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(20, 242, 215, 0.25);
+  }
+}
+
+
 
 /* ---------------- PROJECT IMAGE STANDARD ---------------- */
 .project-image {
