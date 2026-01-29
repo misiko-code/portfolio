@@ -57,6 +57,50 @@ img {
   }
 }
 
+/* ---------- MOBILE-FIRST CONTAINERS ---------- */
+.section-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;   /* 16px */
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    max-width: 1280px;
+    padding-left: 5rem; /* 80px */
+    padding-right: 5rem;
+  }
+}
+
+/* ---------- MOBILE TYPOGRAPHY ---------- */
+h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Desktop upgrades */
+@media (min-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.5rem; }
+  p  { font-size: 1rem; }
+}
+
+
 /* Center content and limit max width */
 .container {
   max-width: 1200px;   /* prevents content from stretching too wide */
@@ -192,22 +236,18 @@ body::after {
 }
 
 
-/* Side-by-side 2-photo collage */
+/* ---------- PROJECT COLLAGE ---------- */
 .project-collage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .5rem;
-  width: 100%;
-  max-width: 42rem; /* matches your project-image width */
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-/* Mobile: stack images */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .project-collage {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 /* ---------------- HOVER ---------------- */
 .project-image img {
@@ -289,6 +329,12 @@ body::after {
   opacity: 0;                  /* hidden initially */
   transform: translateY(20px); /* this moves it up and down */
   transition: all 0.8s ease-out;
+  padding: 1.25rem;
+}
+@media (min-width: 768px) {
+  .fun-fact-tab {
+    padding: 2rem;
+  }
 }
 
 .fun-fact-tab.active {
@@ -366,6 +412,20 @@ body::after {
     object-fit: cover;
     transition: all 0.5s ease;
   }
+
+  @media (max-width: 640px) {
+  .gallery-strip {
+    animation-duration: 60s;
+  }
+
+  .gallery-item:hover {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+
+/* ---------------- PORTFOLIO NOTE ANIMATION ---------------- */
 
     /* Reveal + fade-in animation */
 .portfolio-note {
