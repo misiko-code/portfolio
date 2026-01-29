@@ -191,6 +191,41 @@ body::after {
   transform: translateY(0);
 }
 
+/* ---------- EXPERTISE MOBILE LAYOUT ---------- */
+
+.expertise-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.expertise-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background: rgba(20,242,215,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.expertise-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #14f2d7;
+  line-height: 1.2;
+}
+
+.expertise-desc {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+
 /* ---------------- PROJECT IMAGE STANDARD ---------------- */
 .project-image {
   width: 100%;
@@ -257,6 +292,19 @@ body::after {
   transform: scale(1.05);
   box-shadow: 0 0 40px rgba(20,242,215,.35);
 }
+/* ---------- MOBILE IMAGE SAFETY ---------- */
+@media (max-width: 640px) {
+  .project-image {
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .project-image img {
+    object-fit: contain;
+    background-color: #0f0f0f;
+  }
+}
+/* ---------------- PROJECT CARD LIFT ---------------- */
 
 .project .card {
   transition: transform .4s ease;
@@ -329,7 +377,7 @@ body::after {
   opacity: 0;                  /* hidden initially */
   transform: translateY(20px); /* this moves it up and down */
   transition: all 0.8s ease-out;
-  padding: 1.25rem;
+  padding: 0.25rem;
 }
 @media (min-width: 768px) {
   .fun-fact-tab {
