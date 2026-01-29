@@ -1,4 +1,17 @@
 
+/* ---------------- GLOBAL STYLES ---------------- */
+/* Reset default margin and padding */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Center content and limit max width */
 .container {
   max-width: 1200px;   /* prevents content from stretching too wide */
@@ -80,8 +93,8 @@ body::after {
 /* ---------------- SCROLL REVEAL ---------------- */
 .reveal {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal.active {
